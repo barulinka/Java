@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <h1>Zadejte jak dlouhou chcete mít čáru</h1>
+  <input type="number" id="length">
+  <button onclick="draw()">Vytvořit</button>
+  <script>
+    function draw() {
+      var length = document.getElementById("length").value;
+      var line = "";
+      for (var i = 0; i < length; i++) {
+        line += ".";
+      }
+      document.write(line);
+    }
+  </script>
+</body>
+</html>

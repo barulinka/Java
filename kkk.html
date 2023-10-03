@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <h1>Vypište všechna prvočísla do tisíce</h1>
+  <button onclick="start()">Vypiš</button>
+  <button onclick="end()">Konec</button>
+  <div id="result"></div>
+  <script>
+    function start() {
+      var result = "";
+      for (var i = 2; i <= 1000; i++) {
+        if (isPrime(i)) {
+          result += i + " ";
+        }
+      }
+      document.getElementById("result").innerHTML = result;
+    }
+    function end() {
+      document.getElementById("result").innerHTML = "";
+    }
+    function isPrime(number) {
+      if (number <= 1) {
+        return false;
+      }
+      for (var i = 2; i <= Math.sqrt(number); i++) {
+        if (number % i == 0) {
+          return false;
+        }
+      }
+      return true;
+    }
+  </script>
+</body>
+</html>
